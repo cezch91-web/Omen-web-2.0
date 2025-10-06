@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OMEN Futbol – Predicciones Profesionales</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- 🌐 HEADER / NAV -->
+  <header class="main-header">
+    <div class="logo">
+      <img src="assets/logo.png" alt="OMEN Futbol Logo" />
+      <h1>OMEN <span>futbol</span></h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#picks">Picks</a></li>
+        <li><a href="#estadisticas">Estadísticas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 📊 BARRA LATERAL -->
+  <aside class="sidebar">
+    <h2>📈 Resultados del día</h2>
+    <div class="match-slider" id="match-slider">
+      <!-- Ejemplo de partido -->
+      <div class="match-card">
+        <div class="teams">
+          <img src="assets/barcelona.png" alt="Barcelona" />
+          <span>Barcelona 3 - 1 Real Madrid</span>
+          <img src="assets/real_madrid.png" alt="Real Madrid" />
+        </div>
+        <div class="stats">
+          <p>⚽ Goles 1T: 2 - 1 | 2T: 1 - 0</p>
+          <p>🟨 Amarillas: 3 - 2 | 🟥 Rojas: 0 - 1</p>
+          <p>📊 Corners: 7 - 4 | 🥅 Remates: 14 - 8</p>
+        </div>
+      </div>
+
+      <div class="match-card">
+        <div class="teams">
+          <img src="assets/arsenal.png" alt="Arsenal" />
+          <span>Arsenal 2 - 2 Manchester City</span>
+          <img src="assets/man_city.png" alt="Man City" />
+        </div>
+        <div class="stats">
+          <p>⚽ Goles 1T: 1 - 1 | 2T: 1 - 1</p>
+          <p>🟨 Amarillas: 2 - 2 | 🟥 Rojas: 0 - 0</p>
+          <p>📊 Corners: 5 - 6 | 🥅 Remates: 12 - 13</p>
+        </div>
+      </div>
+
+      <!-- Puedes agregar más partidos aquí manualmente -->
+    </div>
+  </aside>
+
+  <!-- 🧠 SECCIÓN PRINCIPAL -->
+  <main class="main-content">
+    <section id="hero">
+      <h2>La predicción nace aquí ⚽</h2>
+      <p>OMEN Futbol analiza estadísticas, tendencias y lógica deportiva para traerte los picks más precisos y rentables del mercado.</p>
+    </section>
+
+    <section id="picks" class="picks-section">
+      <h2>Picks Destacados</h2>
+      <div class="pick-card">
+        <h3>📊 Pick sugerido: Arsenal vs Liverpool</h3>
+        <p>➡️ Más de 2.5 goles | Momio: 1.88</p>
+        <p>📈 Justificación: Ambos equipos promedian más de 2.8 goles por partido en los últimos 10 encuentros.</p>
+      </div>
+    </section>
+
+    <section id="estadisticas" class="stats-section">
+      <h2>📊 Rendimiento Global</h2>
+      <p>✅ 78% de efectividad en los últimos 30 picks</p>
+      <p>🏆 ROI promedio: +24.5%</p>
+      <p>📅 Últimos 7 días: 16 aciertos – 5 fallos</p>
+    </section>
+  </main>
+
+  <!-- 📬 PICK DEL DÍA (POP-UP) -->
+  <div class="pick-popup" id="pick-popup">
+    <div class="popup-content">
+      <h2>🎯 Pick del Día</h2>
+      <p>PSG vs Monaco – 🏆 PSG gana y más de 2.5 goles | Momio: 1.95</p>
+      <p>📊 Confianza: 87% | 📈 Basado en tendencias y rendimiento reciente.</p>
+      <button onclick="closePopup()">Cerrar</button>
+    </div>
+  </div>
+
+  <!-- 📞 CONTACTO -->
+  <footer id="contacto">
+    <p>© 2025 OMEN Futbol – Predicciones profesionales. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

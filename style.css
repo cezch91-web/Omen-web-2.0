@@ -1,0 +1,288 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0e0e0f;
+  color: #f5f5f5;
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ===== HEADER ===== */
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: #101014;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+
+.main-header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.main-header .logo img {
+  height: 50px;
+}
+
+.main-header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #f5f5f5;
+}
+
+.main-header h1 span {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #5ea4ff;
+  margin-left: 5px;
+}
+
+.main-header nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.main-header nav a {
+  color: #f5f5f5;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.main-header nav a:hover {
+  color: #5ea4ff;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  position: fixed;
+  right: 0;
+  top: 80px;
+  width: 340px;
+  height: calc(100vh - 80px);
+  background: #16161a;
+  overflow: hidden;
+  padding: 20px;
+  border-left: 2px solid #1e1e22;
+}
+
+.sidebar h2 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #5ea4ff;
+}
+
+.match-slider {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: scrollMatches 15s linear infinite;
+}
+
+@keyframes scrollMatches {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-100%); }
+}
+
+.match-card {
+  background: #1b1b20;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  transition: 0.3s;
+}
+
+.match-card:hover {
+  transform: translateY(-4px);
+}
+
+.teams {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.teams img {
+  width: 38px;
+  height: 38px;
+}
+
+.stats p {
+  font-size: 0.9rem;
+  color: #cfcfcf;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+  flex: 1;
+  margin-right: 340px;
+  padding-top: 100px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+#hero {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+#hero p {
+  font-size: 1.2rem;
+  color: #cfcfcf;
+}
+
+.picks-section {
+  margin-bottom: 50px;
+}
+
+.pick-card {
+  background: #1b1b20;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+.pick-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.pick-card p {
+  font-size: 1.1rem;
+  color: #d4d4d4;
+}
+
+.stats-section {
+  background: #141418;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+.stats-section h2 {
+  margin-bottom: 10px;
+}
+
+.stats-section p {
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+/* ===== PICK DEL DÍA POP-UP ===== */
+.pick-popup {
+  position: fixed;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  background: #1c1c21;
+  padding: 30px;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.6);
+  transition: bottom 0.6s ease;
+  z-index: 2000;
+}
+
+.pick-popup.active {
+  bottom: 0;
+}
+
+.popup-content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.popup-content h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #5ea4ff;
+}
+
+.popup-content p {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+.popup-content button {
+  padding: 12px 30px;
+  font-size: 1rem;
+  background: #5ea4ff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.popup-content button:hover {
+  background: #2c8af7;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #101014;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #9c9c9c;
+  margin-top: 50px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .sidebar {
+    display: none;
+  }
+  .main-content {
+    margin-right: 0;
+    padding: 100px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  .main-header nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  #hero h2 {
+    font-size: 2rem;
+  }
+
+  .pick-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .popup-content p {
+    font-size: 1.1rem;
+  }
+}

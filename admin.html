@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel de Administración - OMEN Futbol</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="admin-body">
+
+  <!-- LOGIN -->
+  <div id="login-container" class="login-container">
+    <h2>🔐 Acceso Privado</h2>
+    <input type="text" id="username" placeholder="Usuario">
+    <input type="password" id="password" placeholder="Contraseña">
+    <button onclick="login()">Ingresar</button>
+    <p id="login-error"></p>
+  </div>
+
+  <!-- PANEL -->
+  <div id="panel-container" class="panel-container" style="display:none;">
+    <h1>📊 Panel OMEN Futbol</h1>
+
+    <!-- 🏆 Agregar Partido -->
+    <section class="admin-section">
+      <h2>⚽ Agregar Partido</h2>
+      <input type="text" id="equipo1" placeholder="Equipo Local">
+      <input type="text" id="equipo2" placeholder="Equipo Visitante">
+      <input type="text" id="resultado" placeholder="Marcador (ej: 3-1)">
+      <input type="text" id="liga" placeholder="Liga (ej: LaLiga)">
+      <textarea id="estadisticas" placeholder="Goles, tarjetas, corners, etc."></textarea>
+      <button onclick="agregarPartido()">Guardar Partido</button>
+    </section>
+
+    <!-- 🎯 Agregar Pick del Día -->
+    <section class="admin-section">
+      <h2>🎯 Pick del Día</h2>
+      <input type="text" id="pickPartido" placeholder="Partido (ej: PSG vs Monaco)">
+      <input type="text" id="pickMomio" placeholder="Momio (ej: 1.95)">
+      <textarea id="pickAnalisis" placeholder="Análisis del pick"></textarea>
+      <input type="text" id="pickConfianza" placeholder="Confianza (ej: 87%)">
+      <button onclick="agregarPick()">Guardar Pick del Día</button>
+    </section>
+
+    <!-- 📰 Noticias -->
+    <section class="admin-section">
+      <h2>📰 Noticia / Alerta</h2>
+      <input type="text" id="noticiaTitulo" placeholder="Título de la noticia">
+      <textarea id="noticiaTexto" placeholder="Contenido..."></textarea>
+      <button onclick="agregarNoticia()">Publicar Noticia</button>
+    </section>
+
+    <!-- 📊 Historial -->
+    <section class="admin-section">
+      <h2>📈 Historial de Picks</h2>
+      <ul id="historial-lista"></ul>
+    </section>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>
